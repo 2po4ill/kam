@@ -35,11 +35,10 @@ def imageconverter(draw, width, height, pix, mode):
                     draw.point((i, j), (255, 255, 255))
 
 
-"""dir = r'dir'
+dir = r'dir'
 for file in os.listdir(dir):
     path = os.path.join(dir, file)
     if ".png" in path:
         image = Image.open(path)
         imagereader(image)
         image.save(path, "png")
-"""
