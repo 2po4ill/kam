@@ -31,13 +31,15 @@ def imageconverter(draw, width, height, pix, mode):
                 redn = pix[i, j][0]
                 greenn = pix[i, j][1]
                 bluen = pix[i, j][2]
-                if redn < 247 and greenn < 247 and bluen < 247:
-                    draw.point((i, j), (247, 247, 247))
+                if redn >= 235 and greenn >= 235 and bluen >= 235 and redn != 255 and greenn != 255 and bluen != 255:
+                    draw.point((i, j), (255, 255, 255))
 
 
-dir = r'dir'
-
+"""dir = r'dir'
 for file in os.listdir(dir):
     path = os.path.join(dir, file)
-    image = Image.open(path)
-    imagereader(image)
+    if ".png" in path:
+        image = Image.open(path)
+        imagereader(image)
+        image.save(path, "png")
+"""
